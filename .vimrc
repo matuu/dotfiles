@@ -110,9 +110,10 @@ set softtabstop=4
 set shiftwidth=4
 
 " tablength exceptions
-autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"Was disabled because I use 4 for all!
+"autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
+"autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " always show status bar
 set ls=2
@@ -229,7 +230,7 @@ let g:pymode_lint_on_write = 0
 " run pep8+pyflakes+pylint validator with \8
 autocmd FileType python map <buffer> <leader>8 :PymodeLint<CR>
 " rules to ignore (example: "E501,W293")
-let g:pymode_lint_ignore = ""
+let g:pymode_lint_ignore = "E501"
 " don't add extra column for error icons (on console vim creates a 2-char-wide
 " extra column)
 let g:pymode_lint_signs = 0
